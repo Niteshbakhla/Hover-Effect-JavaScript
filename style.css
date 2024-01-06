@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(41, 41, 159);
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(41, 41, 159);
+}
+
+.float-left {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    left: 100%;
+    border-radius: 50%;
+   background-color: rgba(255, 255, 0, 0.878);
+   transition: all cubic-bezier(0.6, 0.04, 0.98, 0.835) 0.5s;
+}
+
+
+.float-right {
+    position: absolute;
+    width: 100vw;
+    height: 100vw;
+    right: 100%;
+    border-radius: 50%;
+    background-color: rgb(58, 88, 198);
+    transition: all cubic-bezier(0.6, 0.04, 0.98, 0.835) 0.5s;
+}
+
+.cards {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    perspective: 1000px;
+    perspective-origin: center center ;
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 60vh;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.card:nth-child(1) {
+    z-index: 9;
+    transform: rotateY(0deg) translate(-50%, 0);
+    left: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+
+.card:nth-child(2) {
+    flex-direction: column;
+    rotate: 6deg;
+}
+
+.card.card:nth-child(3){
+    flex-direction: column;
+    rotate: -6deg;
+}
